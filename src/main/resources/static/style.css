@@ -1,0 +1,68 @@
+/* Common Styles */
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for Gallery */
+@media (max-width: 600px) {
+    .photo img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Styles specific for index.html */
+.photo {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.photo img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Styles specific for photo-page.html */
+.photo-detail .photo-container {
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.photo-detail .full-size-photo {
+    max-width: 90%;
+    max-height: 600px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.photo-detail .photo-info {
+    margin-bottom: 20px;
+}
+
+.photo-detail .photo-info p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
