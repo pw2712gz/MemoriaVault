@@ -2,6 +2,14 @@
 
 MemoriaVault is a photo management web application that allows users to upload, view, and manage their photos efficiently. Built with Spring Boot for the backend.
 
+
+https://github.com/pw2712gz/MemoriaVault/assets/123153833/701c640a-bad4-4f9e-9869-b40757033cc4
+
+
+
+
+
+
 ## Features
 
 - **Photo Upload**: Users can upload photos through a simple interface.
