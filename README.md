@@ -14,7 +14,6 @@ MemoriaVault is a photo management web application that allows users to upload, 
 - Spring Boot
 - Spring Data JPA
 - MySQL
-- Tailwind CSS
 - HTMX
 
 ## Getting Started
@@ -24,7 +23,6 @@ MemoriaVault is a photo management web application that allows users to upload, 
 - Java 11 or later
 - Maven
 - MySQL
-- Node.js and npm (for Tailwind CSS)
 
 ### Setup
 
@@ -53,20 +51,6 @@ MemoriaVault is a photo management web application that allows users to upload, 
    ```sh
    mvn spring-boot:run
    ```
-
-4. **Tailwind CSS Setup**
-
-   - Install Tailwind CSS dependencies.
-
-     ```sh
-     npm install
-     ```
-
-   - Build the CSS file.
-
-     ```sh
-     npx tailwindcss -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/dist/output.css --watch
-     ```
 
 ### Accessing the Application
 
