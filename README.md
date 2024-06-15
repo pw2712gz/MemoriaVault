@@ -1,12 +1,19 @@
 # MemoriaVault
 
-MemoriaVault is a photo management web application that allows users to upload, view, and manage their photos efficiently. Built with Spring Boot for the backend and Tailwind CSS for the frontend, it offers a sleek user interface with support for dark mode, making photo management a visually pleasing experience.
+MemoriaVault is a photo management web application that allows users to upload, view, and manage their photos efficiently. Built with Spring Boot for the backend.
+
+
+https://github.com/pw2712gz/MemoriaVault/assets/123153833/701c640a-bad4-4f9e-9869-b40757033cc4
+
+
+
+
+
 
 ## Features
 
 - **Photo Upload**: Users can upload photos through a simple interface.
 - **Photo Gallery**: Uploaded photos are displayed in a responsive gallery.
-- **Dark Mode**: Toggle between light and dark themes for user comfort.
 - **Delete Photos**: Users can delete photos from the gallery.
 
 ## Technologies Used
@@ -14,7 +21,6 @@ MemoriaVault is a photo management web application that allows users to upload, 
 - Spring Boot
 - Spring Data JPA
 - MySQL
-- Tailwind CSS
 - HTMX
 
 ## Getting Started
@@ -24,7 +30,6 @@ MemoriaVault is a photo management web application that allows users to upload, 
 - Java 11 or later
 - Maven
 - MySQL
-- Node.js and npm (for Tailwind CSS)
 
 ### Setup
 
@@ -54,27 +59,13 @@ MemoriaVault is a photo management web application that allows users to upload, 
    mvn spring-boot:run
    ```
 
-4. **Tailwind CSS Setup**
-
-   - Install Tailwind CSS dependencies.
-
-     ```sh
-     npm install
-     ```
-
-   - Build the CSS file.
-
-     ```sh
-     npx tailwindcss -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/dist/output.css --watch
-     ```
-
 ### Accessing the Application
 
 Open your web browser and go to `http://localhost:8080/memoriavault`. You should see the MemoriaVault interface ready for use.
 
 ## Contributing
 
-I welcome contributions to MemoriaVault. Please read my contributing guidelines before submitting pull requests.
+I welcome contributions to MemoriaVault.
 
 ## License
 
