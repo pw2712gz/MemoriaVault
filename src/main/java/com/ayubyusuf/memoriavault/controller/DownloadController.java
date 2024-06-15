@@ -1,6 +1,7 @@
 package com.ayubyusuf.memoriavault.controller;
 
 import com.ayubyusuf.memoriavault.service.PhotoService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @RestController
@@ -31,7 +31,7 @@ public class DownloadController {
 		Resource resource = photoService.loadFileAsResourceById(id);
 
 		// Try to determine file's content type
-		String contentType = null;
+        String contentType;
 		try {
 			contentType = request.getServletContext().getMimeType(resource.getFile().getAbsolutePath());
 		} catch (IOException ex) {

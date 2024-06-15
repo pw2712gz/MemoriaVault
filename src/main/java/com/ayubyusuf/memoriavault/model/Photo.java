@@ -1,6 +1,7 @@
 package com.ayubyusuf.memoriavault.model;
 
 import jakarta.persistence.*;
+
 import java.util.Date;
 
 @Entity
@@ -17,7 +18,7 @@ public class Photo {
 	private Date uploadDate;
 
 	public Photo() {
-		// Default constructor for JPA
+
 	}
 
 	public Photo(String fileName, String fileType, Date uploadDate) {

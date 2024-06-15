@@ -42,7 +42,7 @@ public class PhotoController {
 			PhotoDTO dto = convertToDto(photo);
 			return ResponseEntity.ok(dto);
 		} catch (Exception e) {
-			logger.error("Upload failed: " + e.getMessage());
+            logger.error("Upload failed: {}", e.getMessage());
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
 	}
@@ -78,10 +78,10 @@ public class PhotoController {
 			headers.setContentType(MediaType.TEXT_PLAIN);
 			return new ResponseEntity<>(message, headers, HttpStatus.OK);
 		} catch (PhotoNotFoundException e) {
-			logger.error("Error deleting photo: " + e.getMessage());
+            logger.error("Error deleting photo: {}", e.getMessage());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Error deleting photo: " + e.getMessage());
 		} catch (Exception e) {
-			logger.error("Error deleting photo: " + e.getMessage());
+            logger.error("Error deleting photo : {}", e.getMessage());
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error deleting photo: " + e.getMessage());
 		}
 	}

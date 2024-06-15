@@ -52,4 +52,6 @@ public class PhotoDTO {
 	public void setFileDownloadUri(String fileDownloadUri) {
 		this.fileDownloadUri = fileDownloadUri;
 	}
+
+
 }
