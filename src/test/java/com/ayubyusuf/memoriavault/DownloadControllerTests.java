@@ -19,39 +19,39 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 public class DownloadControllerTests {
 
-	private MockMvc mockMvc;
+    private MockMvc mockMvc;
 
-	@Mock
-	private PhotoService photoService;
+    @Mock
+    private PhotoService photoService;
 
-	@BeforeEach
-	void setUp() {
-		openMocks(this);
-		DownloadController downloadController = new DownloadController(photoService);
-		mockMvc = MockMvcBuilders.standaloneSetup(downloadController).build();
-	}
+    @BeforeEach
+    void setUp() {
+        openMocks(this);
+        DownloadController downloadController = new DownloadController(photoService);
+        mockMvc = MockMvcBuilders.standaloneSetup(downloadController).build();
+    }
 
-	@Test
-	void downloadPhotoAsPngTest() throws Exception {
-		Resource pngImage = new ClassPathResource("test-photo.png");
-		when(photoService.loadFileAsResourceById(anyLong())).thenReturn(pngImage);
+    @Test
+    void downloadPhotoAsPngTest() throws Exception {
+        Resource pngImage = new ClassPathResource("test-photo.png");
+        when(photoService.loadFileAsResourceById(anyLong())).thenReturn(pngImage);
 
-		mockMvc.perform(get("/photos/download/1"))
-				.andExpect(status().isOk())
-				.andExpect(content().contentType(MediaType.IMAGE_PNG))
-				.andExpect(header().string("Content-Disposition", "attachment; filename=\"" + pngImage.getFilename() + "\""));
-	}
+        mockMvc.perform(get("/photos/download/1"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.IMAGE_PNG))
+                .andExpect(header().string("Content-Disposition", "attachment; filename=\"" + pngImage.getFilename() + "\""));
+    }
 
-	@Test
-	void downloadPhotoAsJpegTest() throws Exception {
-		Resource jpegImage = new ClassPathResource("test-photo.jpg");
-		when(photoService.loadFileAsResourceById(anyLong())).thenReturn(jpegImage);
+    @Test
+    void downloadPhotoAsJpegTest() throws Exception {
+        Resource jpegImage = new ClassPathResource("test-photo.jpg");
+        when(photoService.loadFileAsResourceById(anyLong())).thenReturn(jpegImage);
 
-		mockMvc.perform(get("/photos/download/1"))
-				.andExpect(status().isOk())
-				.andExpect(content().contentType(MediaType.IMAGE_JPEG))
-				.andExpect(header().string("Content-Disposition", "attachment; filename=\"" + jpegImage.getFilename() + "\""));
-	}
+        mockMvc.perform(get("/photos/download/1"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.IMAGE_JPEG))
+                .andExpect(header().string("Content-Disposition", "attachment; filename=\"" + jpegImage.getFilename() + "\""));
+    }
 
 
 }

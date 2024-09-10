@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Photo Details</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/htmx.org"></script>
@@ -10,7 +10,7 @@
 <body class="bg-white text-gray-900 min-h-screen">
 
 <div class="container mx-auto px-4 py-8">
-    <div id="photo-detail" class="max-w-4xl mx-auto">
+    <div class="max-w-4xl mx-auto" id="photo-detail">
         <!-- Photo details will be dynamically loaded here -->
     </div>
 </div>
@@ -48,7 +48,7 @@
     }
 
     function deletePhoto(id) {
-        fetch(`/memoriavault/photos/${id}`, { method: 'DELETE' })
+        fetch(`/memoriavault/photos/${id}`, {method: 'DELETE'})
             .then(response => response.text()) // Expecting text response
             .then(data => {
                 if (data) {

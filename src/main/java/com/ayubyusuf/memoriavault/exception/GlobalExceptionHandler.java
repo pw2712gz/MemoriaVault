@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-	@ExceptionHandler(PhotoNotFoundException.class)
-	public ResponseEntity<?> handlePhotoNotFoundException(PhotoNotFoundException ex) {
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
-	}
+    @ExceptionHandler(PhotoNotFoundException.class)
+    public ResponseEntity<?> handlePhotoNotFoundException(PhotoNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
 
-	@ExceptionHandler(StorageException.class)
-	public ResponseEntity<?> handleStorageException(StorageException ex) {
-		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
-	}
+    @ExceptionHandler(StorageException.class)
+    public ResponseEntity<?> handleStorageException(StorageException ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+    }
 
-	// Other exception handlers...
+    // Other exception handlers...
 }
 

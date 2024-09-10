@@ -23,9 +23,5 @@ public class Photo {
     @Temporal(TemporalType.TIMESTAMP)
     private Date uploadDate;
 
-    public Photo(String image, String contentType, Date date) {
-        this.fileName = image;
-        this.fileType = contentType;
-        this.uploadDate = date;
-    }
+
 }
